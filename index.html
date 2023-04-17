@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ITST 304</title>
+  <title>Cube Game</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+		}
+	</style>
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/logo-ccs-60.png" type="image/x-icon" />
@@ -14,94 +19,10 @@
   <meta name="apple-mobile-web-app-title" content="ITST 304">
   <meta name="msapplication-TileImage" content="images/logo-ccs-90.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
-  <style>
-	/* Game board styles */
-	#board {
-		width: 400px;
-		height: 400px;
-		margin: 20px auto;
-		border: 1px solid #333;
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	/* Square styles */
-	.square {
-		width: 50px;
-		height: 50px;
-		box-sizing: border-box;
-		text-align: center;
-		line-height: 50px;
-		font-size: 30px;
-	}
-
-	/* Dark square styles */
-	.dark {
-		background-color: #333;
-		color: #fff;
-	}
-
-	/* Light square styles */
-	.light {
-		background-color: #eee;
-	}
-
-	/* Red piece styles */
-	.red {
-		background-color: red;
-		border-radius: 50%;
-	}
-
-	/* Black piece styles */
-	.black {
-		background-color: black;
-		border-radius: 50%;
-		color: #fff;
-	}
-
-</style>
+ 
 </head>
 <body class="fullscreen">
-	<div id="board"></div>
-
-	<script>
-
-		// Create an array to represent the game board
-		var board = [
-			["", "red", "", "red", "", "red", "", "red"],
-			["red", "", "red", "", "red", "", "red", ""],
-			["", "red", "", "red", "", "red", "", "red"],
-			["", "", "", "", "", "", "", ""],
-			["", "", "", "", "", "", "", ""],
-			["black", "", "black", "", "black", "", "black", ""],
-			["", "black", "", "black", "", "black", "", "black"],
-			["black", "", "black", "", "black", "", "black", ""]
-		];
-
-		// Create a function to draw the game board
-		function drawBoard() {
-			var html = "";
-			for (var i = 0; i < 8; i++) {
-				for (var j = 0; j < 8; j++) {
-					if ((i + j) % 2 == 0) {
-						html += '<div class="square light" id="' + i + j + '">';
-					} else {
-						html += '<div class="square dark" id="' + i + j + '">';
-					}
-					if (board[i][j] == "red") {
-						html += '<div class="piece red">&#x25CF;</div>';
-					} else if (board[i][j] == "black") {
-						html += '<div class="piece black">&#x25CF;</div>';
-					}
-					html += '</div>';
-				}
-			}
-			document.getElementById("board").innerHTML = html;
-		}
-
-		// Call the drawBoard function to initialize the game board
-		drawBoard();
-
-	</script>
+	<canvas id="canvas" width="400" height="400"></canvas>
+	<script src="main.js"></script>
 </body>
 </html>
