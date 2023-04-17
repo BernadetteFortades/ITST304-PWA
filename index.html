@@ -16,12 +16,68 @@
   <meta name="msapplication-TileColor" content="#FFFFFF">
 </head>
 <body class="fullscreen">
-  <div class="container">
-    <h1 class="title">ITST 304</h1>
-    <p>I love PWA Programming! =)</p>
-    <canvas id="canvas" style="height: 400px;width:300;border: 1px solid;"></canvas>
-    <script src="snake.js"></script>
-  </div>
-  <script src="js/main.js"></script>
+  <header>
+		<h1>LearnIt</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Courses</a></li>
+				<li><a href="#">My Courses</a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Log Out</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2>Courses</h2>
+			<ul>
+				<li>
+					<h3>Introduction to Programming</h3>
+					<p>In this course, you will learn the basics of programming using Python. No prior programming experience required.</p>
+					<a href="#">Enroll Now</a>
+				</li>
+				<li>
+					<h3>Data Science Essentials</h3>
+					<p>This course will teach you the essential skills and techniques for working with data using Python.</p>
+					<a href="#">Enroll Now</a>
+				</li>
+				<li>
+					<h3>Web Development Fundamentals</h3>
+					<p>In this course, you will learn the basics of web development using HTML, CSS, and JavaScript.</p>
+					<a href="#">Enroll Now</a>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>My Courses</h2>
+			<ul>
+				<li>
+					<h3>Introduction to Programming</h3>
+					<p>Progress: 25%</p>
+					<a href="#">Continue Learning</a>
+				</li>
+				<li>
+					<h3>Data Science Essentials</h3>
+					<p>Progress: 50%</p>
+					<a href="#">Continue Learning</a>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Profile</h2>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" value="John Doe">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" value="john.doe@example.com">
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password">
+				<button type="submit">Save Changes</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 LearnIt. All rights reserved.</p>
+	</footer>
 </body>
 </html>
