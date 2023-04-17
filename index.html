@@ -15,126 +15,93 @@
   <meta name="msapplication-TileImage" content="images/logo-ccs-90.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
   <style>
-	/* Board Styles */
-	.board {
-		display: grid;
-		grid-template-columns: repeat(8, 50px);
-		grid-template-rows: repeat(8, 50px);
-		border: 2px solid black;
+	/* Game board styles */
+	#board {
+		width: 400px;
+		height: 400px;
+		margin: 20px auto;
+		border: 1px solid #333;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
-	/* Board Cells Styles */
-	.cell {
-		background-color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+	/* Square styles */
+	.square {
+		width: 50px;
+		height: 50px;
+		box-sizing: border-box;
+		text-align: center;
+		line-height: 50px;
 		font-size: 30px;
 	}
 
-	.cell.odd {
-		background-color: grey;
+	/* Dark square styles */
+	.dark {
+		background-color: #333;
+		color: #fff;
 	}
 
-	/* Piece Styles */
-	.piece {
-		width: 40px;
-		height: 40px;
+	/* Light square styles */
+	.light {
+		background-color: #eee;
+	}
+
+	/* Red piece styles */
+	.red {
+		background-color: red;
 		border-radius: 50%;
 	}
 
-	.piece.white {
-		background-color: white;
+	/* Black piece styles */
+	.black {
+		background-color: black;
+		border-radius: 50%;
+		color: #fff;
 	}
 
-	.piece.black {
-		background-color: black;
-	}
 </style>
 </head>
 <body class="fullscreen">
-	<div class="board">
-        <!-- First row -->
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        
-        <!-- Second row -->
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        
-        <!-- Third row -->
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        
-        <!-- Fourth row -->
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        
-        <!-- Fifth row -->
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        
-        <!-- Sixth row -->
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-        <div class="cell"></div>
-        <div class="cell odd"></div>
-		
-         <!-- First row -->
-		 <div class="cell odd"></div>
-		 <div class="cell"></div>
-		 <div class="cell odd"></div>
-		 <div class="cell"></div>
-		 <div class="cell odd"></div>
-		 <div class="cell"></div>
-		 <div class="cell odd"></div>
-		 <div class="cell"></div>
-		 
-		 <!-- Second row -->
-		 <div class="cell"></div>
-		 <div class="cell odd"></div>
-		 <div class="cell"></div>
-		 <div class="cell odd"></div>
-		 <div class="cell"></div>
-		 <div class="cell odd"></div>
-		 <div class="cell"></div>
-		 <div class="cell odd"></div>
-		 
-		 
-	</div>
+	<div id="board"></div>
+
+	<script>
+
+		// Create an array to represent the game board
+		var board = [
+			["", "red", "", "red", "", "red", "", "red"],
+			["red", "", "red", "", "red", "", "red", ""],
+			["", "red", "", "red", "", "red", "", "red"],
+			["", "", "", "", "", "", "", ""],
+			["", "", "", "", "", "", "", ""],
+			["black", "", "black", "", "black", "", "black", ""],
+			["", "black", "", "black", "", "black", "", "black"],
+			["black", "", "black", "", "black", "", "black", ""]
+		];
+
+		// Create a function to draw the game board
+		function drawBoard() {
+			var html = "";
+			for (var i = 0; i < 8; i++) {
+				for (var j = 0; j < 8; j++) {
+					if ((i + j) % 2 == 0) {
+						html += '<div class="square light" id="' + i + j + '">';
+					} else {
+						html += '<div class="square dark" id="' + i + j + '">';
+					}
+					if (board[i][j] == "red") {
+						html += '<div class="piece red">&#x25CF;</div>';
+					} else if (board[i][j] == "black") {
+						html += '<div class="piece black">&#x25CF;</div>';
+					}
+					html += '</div>';
+				}
+			}
+			document.getElementById("board").innerHTML = html;
+		}
+
+		// Call the drawBoard function to initialize the game board
+		drawBoard();
+
+	</script>
 </body>
 </html>
