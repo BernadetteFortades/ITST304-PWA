@@ -14,70 +14,127 @@
   <meta name="apple-mobile-web-app-title" content="ITST 304">
   <meta name="msapplication-TileImage" content="images/logo-ccs-90.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
+  <style>
+	/* Board Styles */
+	.board {
+		display: grid;
+		grid-template-columns: repeat(8, 50px);
+		grid-template-rows: repeat(8, 50px);
+		border: 2px solid black;
+	}
+
+	/* Board Cells Styles */
+	.cell {
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 30px;
+	}
+
+	.cell.odd {
+		background-color: grey;
+	}
+
+	/* Piece Styles */
+	.piece {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	.piece.white {
+		background-color: white;
+	}
+
+	.piece.black {
+		background-color: black;
+	}
+</style>
 </head>
 <body class="fullscreen">
-  <header>
-		<h1>LearnIt</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Courses</a></li>
-				<li><a href="#">My Courses</a></li>
-				<li><a href="#">Profile</a></li>
-				<li><a href="#">Log Out</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<h2>Courses</h2>
-			<ul>
-				<li>
-					<h3>Introduction to Programming</h3>
-					<p>In this course, you will learn the basics of programming using Python. No prior programming experience required.</p>
-					<a href="#">Enroll Now</a>
-				</li>
-				<li>
-					<h3>Data Science Essentials</h3>
-					<p>This course will teach you the essential skills and techniques for working with data using Python.</p>
-					<a href="#">Enroll Now</a>
-				</li>
-				<li>
-					<h3>Web Development Fundamentals</h3>
-					<p>In this course, you will learn the basics of web development using HTML, CSS, and JavaScript.</p>
-					<a href="#">Enroll Now</a>
-				</li>
-			</ul>
-		</section>
-		<section>
-			<h2>My Courses</h2>
-			<ul>
-				<li>
-					<h3>Introduction to Programming</h3>
-					<p>Progress: 25%</p>
-					<a href="#">Continue Learning</a>
-				</li>
-				<li>
-					<h3>Data Science Essentials</h3>
-					<p>Progress: 50%</p>
-					<a href="#">Continue Learning</a>
-				</li>
-			</ul>
-		</section>
-		<section>
-			<h2>Profile</h2>
-			<form>
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" value="John Doe">
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" value="john.doe@example.com">
-				<label for="password">Password:</label>
-				<input type="password" id="password" name="password">
-				<button type="submit">Save Changes</button>
-			</form>
-		</section>
-	</main>
-	<footer>
-		<p>&copy; 2023 LearnIt. All rights reserved.</p>
-	</footer>
+	<div class="board">
+        <!-- First row -->
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        
+        <!-- Second row -->
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        
+        <!-- Third row -->
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        
+        <!-- Fourth row -->
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        
+        <!-- Fifth row -->
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        
+        <!-- Sixth row -->
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+        <div class="cell"></div>
+        <div class="cell odd"></div>
+		
+         <!-- First row -->
+		 <div class="cell odd"></div>
+		 <div class="cell"></div>
+		 <div class="cell odd"></div>
+		 <div class="cell"></div>
+		 <div class="cell odd"></div>
+		 <div class="cell"></div>
+		 <div class="cell odd"></div>
+		 <div class="cell"></div>
+		 
+		 <!-- Second row -->
+		 <div class="cell"></div>
+		 <div class="cell odd"></div>
+		 <div class="cell"></div>
+		 <div class="cell odd"></div>
+		 <div class="cell"></div>
+		 <div class="cell odd"></div>
+		 <div class="cell"></div>
+		 <div class="cell odd"></div>
+		 
+		 
+	</div>
 </body>
 </html>
