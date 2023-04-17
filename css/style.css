@@ -1,23 +1,126 @@
+/* Global Styles */
 body {
-  font-family: sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Make content area fill the entire browser window */
-html,
-.fullscreen {
-  display: flex;
-  height: 100%;
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
-/* Center the content in the browser window */
-.container {
-  margin: auto;
+/* Header Styles */
+header {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-color: #e6f7ff;
+  padding: 50px;
   text-align: center;
 }
 
-.title {
-  font-size: 3rem;
+.hero-section h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+/* Course Content Styles */
+.course-content {
+  padding: 50px;
+  text-align: center;
+}
+
+.course-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.course-content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.course-content li {
+  margin: 0 20px 20px 20px;
+}
+
+.course-content a {
+  border: 2px solid #3498db;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.course-content a:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Instructor Section Styles */
+.instructor-section {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+.instructor-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.instructor-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.instructor-section p {
+  font-size: 18px;
+  line-height: 1.5;
 }
